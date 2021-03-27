@@ -31,7 +31,10 @@ Bookshelf app built with Node and Graphql
   author(id: "605c6fa9b109ea9d5c0a3118"){
     id
     name
-    age
+    country
+    image
+    birthDate
+    deathDate
     books{
       name
       genre
@@ -43,15 +46,19 @@ Bookshelf app built with Node and Graphql
 ### 2.3 Books query
 ```
 {
-  books{
+  books {
     id
     name
-    genre
-    author{
+    genres {
       name
-      age
     }
-	}
+    pages
+    cover
+    releaseDate
+    author {
+      name
+    }
+  }
 }
 ```
 
@@ -61,7 +68,10 @@ Bookshelf app built with Node and Graphql
   authors{
     id
     name
-    age
+    country
+    image
+    birthDate
+    deathDate
     books{
       name
       genre
@@ -70,14 +80,27 @@ Bookshelf app built with Node and Graphql
 }
 ```
 
+### 2.5 Genres query
+```
+{
+  genres{
+    id
+    name
+  }
+}
+```
+
 ## 3. Mutation Examples
 
 ### 3.1 Add Author
 ```
 mutation {
-  addAuthor(name: "Terry Pratchett", age: 66) {
+  addAuthor(name: "Michael Crichton", country: "United States", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/MichaelCrichton_2.jpg/440px-MichaelCrichton_2.jpg", birthDate: "1942-10-23T03:00:00.000Z", deathDate: "2008-11-04T03:00:00.000Z") {
     name
-    age
+    country
+    image
+    birthDate
+    deathDate
   }
 }
 ```
@@ -85,9 +108,28 @@ mutation {
 ### 3.2 Add Book
 ```
 mutation {
-  addBook(name: "The Long Earth", genre: "Sci-Fi", authorId: "605c6fa9b109ea9d5c0a3118") {
+  addBook(name: "book a", genres: ["605fa946bca81d41e7c9b274", "605fb54ff9972851dd7e0cc6"], pages: 200, cover: "a cover", releaseDate: "2020-10-02", authorId: "605f85df9b6565374fb7047d") {
+    id
     name
-    genre
+    genres {
+      name
+    }
+    pages
+    cover
+    releaseDate
+    author {
+      name
+    }
+  }
+}
+```
+
+### 3.3 Add Genre
+```
+mutation {
+  addGenre(name: "Fantasy"){
+    id
+    name
   }
 }
 ```

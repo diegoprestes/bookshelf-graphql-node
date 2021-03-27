@@ -1,0 +1,7 @@
+[
+  { "name": "Sci-Fi", "id": "1" },
+  { "name": "Techno-thriller", "id": "2" },
+  { "name": "Horror", "id": "3" },
+  { "name": "Nanopunk", "id": "4" },
+  { "name": "Fantasy", "id": "5"}
+]

@@ -3,10 +3,12 @@ const {
   GraphQLNonNull,
   GraphQLString,
   GraphQLInt,
+  GraphQLList,
   GraphQLID
 } = require('graphql');
 const Author = require('../../models/author');
 const Book = require('../../models/book');
+const Genre = require('../../models/genre');
 
 const Mutation = (types) => new GraphQLObjectType({
   name: 'Mutation',
@@ -15,13 +17,19 @@ const Mutation = (types) => new GraphQLObjectType({
       type: types.AuthorType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
-        age: { type: new GraphQLNonNull(GraphQLInt) }
+        country: { type: new GraphQLNonNull(GraphQLString) },
+        image: { type: new GraphQLNonNull(GraphQLString) },
+        birthDate: { type: new GraphQLNonNull(GraphQLString) },
+        deathDate: { type: GraphQLString }
       },
       resolve(parent, args) {
-        const { name, age } = args;
+        const { name, country, image, birthDate, deathDate } = args;
         let author = new Author({
           name,
-          age
+          country,
+          image,
+          birthDate,
+          deathDate
         });
         return author.save();
       }
@@ -30,17 +38,36 @@ const Mutation = (types) => new GraphQLObjectType({
       type: types.BookType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
-        genre: { type: new GraphQLNonNull(GraphQLString) },
+        genres: { type: new GraphQLNonNull(new GraphQLList(GraphQLID)) },
+        pages: { type: new GraphQLNonNull(GraphQLInt) },
+        cover: { type: new GraphQLNonNull(GraphQLString) },
+        releaseDate: { type: new GraphQLNonNull(GraphQLString) },
         authorId: { type: new GraphQLNonNull(GraphQLID) }
       },
       resolve(parent, args) {
-        const { name, genre, authorId } = args;
+        const { name, genres, pages, cover, releaseDate, authorId } = args;
         let book = new Book({
           name,
-          genre,
+          genres,
+          pages,
+          cover,
+          releaseDate,
           authorId
         });
         return book.save();
+      }
+    },
+    addGenre: {
+      type: types.GenreType,
+      args: {
+        name: { type: new GraphQLNonNull(GraphQLString) }
+      },
+      resolve(parent, args) {
+        const { name } = args;
+        let genre = new Genre({
+          name
+        });
+        return genre.save();
       }
     }
   }
