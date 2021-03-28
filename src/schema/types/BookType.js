@@ -21,7 +21,7 @@ const BookType = (types) => new GraphQLObjectType({
     },
     pages: { type: GraphQLInt},
     cover: { type: GraphQLString },
-    releaseDate: { type: GraphQLString },
+    year: { type: GraphQLInt },
     author: {
       type: types.AuthorType,
       resolve(parent, args) {

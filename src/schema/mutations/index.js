@@ -41,17 +41,17 @@ const Mutation = (types) => new GraphQLObjectType({
         genres: { type: new GraphQLNonNull(new GraphQLList(GraphQLID)) },
         pages: { type: new GraphQLNonNull(GraphQLInt) },
         cover: { type: new GraphQLNonNull(GraphQLString) },
-        releaseDate: { type: new GraphQLNonNull(GraphQLString) },
+        year: { type: new GraphQLNonNull(GraphQLInt) },
         authorId: { type: new GraphQLNonNull(GraphQLID) }
       },
       resolve(parent, args) {
-        const { name, genres, pages, cover, releaseDate, authorId } = args;
+        const { name, genres, pages, cover, year, authorId } = args;
         let book = new Book({
           name,
           genres,
           pages,
           cover,
-          releaseDate,
+          year,
           authorId
         });
         return book.save();

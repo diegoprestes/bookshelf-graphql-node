@@ -6,7 +6,7 @@ const bookSchema = new Schema({
   genres: [String],
   pages: Number,
   cover: String,
-  releaseDate: String,
+  year: Number,
   authorId: String
 });
 

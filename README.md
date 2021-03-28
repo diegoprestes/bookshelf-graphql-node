@@ -54,7 +54,7 @@ Bookshelf app built with Node and Graphql
     }
     pages
     cover
-    releaseDate
+    year
     author {
       name
     }
@@ -108,7 +108,7 @@ mutation {
 ### 3.2 Add Book
 ```
 mutation {
-  addBook(name: "book a", genres: ["605fa946bca81d41e7c9b274", "605fb54ff9972851dd7e0cc6"], pages: 200, cover: "a cover", releaseDate: "2020-10-02", authorId: "605f85df9b6565374fb7047d") {
+  addBook(name: "book a", genres: ["605fa946bca81d41e7c9b274", "605fb54ff9972851dd7e0cc6"], pages: 200, cover: "a cover", year: 2020, authorId: "605f85df9b6565374fb7047d") {
     id
     name
     genres {
@@ -116,7 +116,7 @@ mutation {
     }
     pages
     cover
-    releaseDate
+    year
     author {
       name
     }
