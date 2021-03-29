@@ -3,7 +3,10 @@ const Schema = mongoose.Schema;
 
 const authorSchema = new Schema({
   name: String,
-  age: Number
+  country: String,
+  image: String,
+  birthDate: String,
+  deathDate: String,
 });
 
 module.exports = mongoose.model('Author', authorSchema);

@@ -1,8 +1,56 @@
 [
-  { "name": "Name of the Wind", "genre": "Fantasy", "id": "1", "authorId": "1" },
-  { "name": "The Final Empire", "genre": "Fantasy", "id": "2", "authorId": "2" },
-  { "name": "The Long Earth", "genre": "Sci-Fi", "id": "3", "authorId": "3" },
-  { "name": "The Hero of Ages", "genre": "Fantasy", "id": "4", "authorId": "2" },
-  { "name": "The Colour of Magic", "genre": "Fantasy", "id": "5", "authorId": "3" },
-  { "name": "The Light Fantastic", "genre": "Fantasy", "id": "6", "authorId": "3" }
+  {
+    "id": "1",
+    "name": "Name of the Wind",
+    "genres": ["5"],
+    "pages": 100,
+    "cover": "https://upload.wikimedia.org/wikipedia/en/5/5a/Prey_%28Michael_Crichton_novel_-_cover_art%29.jpg",
+    "year": "2008",
+    "authorId": "1"
+  },
+  {
+    "id": "2",
+    "name": "The Final Empire",
+    "genres": ["5"],
+    "pages": 100,
+    "cover": "https://upload.wikimedia.org/wikipedia/en/5/5a/Prey_%28Michael_Crichton_novel_-_cover_art%29.jpg",
+    "year": "2008",
+    "authorId": "2"
+  },
+  {
+    "id": "3",
+    "name": "The Long Earth",
+    "genres": ["1"],
+    "pages": 100,
+    "cover": "https://upload.wikimedia.org/wikipedia/en/5/5a/Prey_%28Michael_Crichton_novel_-_cover_art%29.jpg",
+    "year": "2008",
+    "authorId": "3"
+  },
+  {
+    "id": "4",
+    "name": "The Hero of Ages",
+    "genres": ["5"],
+    "pages": 100,
+    "cover": "https://upload.wikimedia.org/wikipedia/en/5/5a/Prey_%28Michael_Crichton_novel_-_cover_art%29.jpg",
+    "year": "2008",
+    "authorId": "2"
+  },
+  {
+    "id": "5",
+    "name": "The Colour of Magic",
+    "genres": ["5"],
+    "pages": 100,
+    "cover": "https://upload.wikimedia.org/wikipedia/en/5/5a/Prey_%28Michael_Crichton_novel_-_cover_art%29.jpg",
+    "year": "2008",
+    "authorId": "3"
+  },
+  {
+    "id": "6",
+    "name": "The Light Fantastic",
+    "genres": ["5"],
+    "pages": 100,
+    "cover": "https://upload.wikimedia.org/wikipedia/en/5/5a/Prey_%28Michael_Crichton_novel_-_cover_art%29.jpg",
+    "year": "2008",
+    "authorId": "3"
+  }
 ]

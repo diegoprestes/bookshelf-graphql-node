@@ -1,5 +1,29 @@
 [
-  { "name": "Patrick Rothfuss", "age": 44, "id": "1" },
-  { "name": "Brandon Sanderson", "age": 42, "id": "2" },
-  { "name": "Terry Pratchett", "age": 66, "id": "3" }
+  {
+    "id": "1",
+    "name": "Michael Crichton",
+    "country": "United States",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/MichaelCrichton_2.jpg/440px-MichaelCrichton_2.jpg",
+    "birthDate": "1942-10-23T03:00:00.000Z",
+    "deathDate": "2008-11-04T03:00:00.000Z",
+    "books": []
+  },
+  {
+    "id": "2",
+    "name": "Dan Brown",
+    "country": "United States",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Dan_Brown_bookjacket_cropped.jpg/440px-Dan_Brown_bookjacket_cropped.jpg",
+    "birthDate": "1964-06-22T03:00:00.000Z",
+    "deathDate": "",
+    "books": []
+  },
+  {
+    "id": "3",
+    "name": "J. K. Rowling",
+    "country": "England",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/440px-J._K._Rowling_2010.jpg",
+    "birthDate": "1965-07-31T03:00:00.000Z",
+    "deathDate": "",
+    "books": []
+  }
 ]

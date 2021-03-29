@@ -1,7 +1,6 @@
 const {
   GraphQLObjectType,
   GraphQLString,
-  GraphQLInt,
   GraphQLID,
   GraphQLList
 } = require('graphql');
@@ -12,11 +11,13 @@ const AuthorType = (types) => new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
-    age: { type: GraphQLInt },
+    country: { type: GraphQLString },
+    image: { type: GraphQLString },
+    birthDate: { type: GraphQLString },
+    deathDate: { type: GraphQLString },
     books: {
       type: new GraphQLList(types.BookType),
       resolve(parent, args) {
-        // return _.filter(books, { authorId: parent.id });
         return Book.find({
           authorId: parent.id
         });
