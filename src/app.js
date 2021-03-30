@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
 const { graphqlHTTP } = require('express-graphql');
 const mongoose = require('mongoose');
 const schema = require('./schema/schema');
 
 const app = express();
 app.use(cors());
+app.use(helmet());
 
 const DB_USER = 'omnistack';
 const DB_PASS = 'omnistack';
